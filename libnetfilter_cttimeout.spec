@@ -58,3 +58,15 @@ rm -f %{buildroot}%{_libdir}/*.la
 %{_includedir}/%{name}/%{name}*.h
 %{_libdir}/%{name}.so
 %{_libdir}/pkgconfig/%{name}.pc
+
+
+%changelog
+* Mon May 28 2012 Oden Eriksson <oeriksson@mandriva.com> 1.0.0-2
++ Revision: 800927
+- rebuild
+
+* Mon May 28 2012 Oden Eriksson <oeriksson@mandriva.com> 1.0.0-1
++ Revision: 800911
+- initial Mandriva package
+- Created package structure for libnetfilter_cttimeout.
+
