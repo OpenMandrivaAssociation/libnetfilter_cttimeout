@@ -1,6 +1,6 @@
-%define major 1
-%define libname %mklibname netfilter_cttimeout %{major}
-%define develname %mklibname netfilter_cttimeout -d
+%define major	1
+%define libname	%mklibname netfilter_cttimeout %{major}
+%define devname	%mklibname netfilter_cttimeout -d
 
 Summary:	Netfilter extended cttimeout infrastructure library
 Name:		libnetfilter_cttimeout
@@ -8,7 +8,7 @@ Version:	1.0.0
 Release:	2
 License:	GPLv2+
 Group:		System/Kernel and hardware
-URL:		http://www.netfilter.org/projects/%{name}/
+Url:		http://www.netfilter.org/projects/%{name}/
 Source0:	http://www.netfilter.org/projects/%{name}/files/%{name}-%{version}.tar.bz2
 Source1:	http://www.netfilter.org/projects/%{name}/files/%{name}-%{version}.tar.bz2.sig
 BuildRequires:	pkgconfig(libmnl) >= 1.0.0
@@ -28,14 +28,14 @@ Provides:	%{name} = %{version}-%{release}
 This package contains the library needed to run programs dynamically
 linked with %{name}.
 
-%package -n	%{develname}
+%package -n	%{devname}
 Summary:	Development files for %{name}
 Group:		System/Libraries
 Requires:	%{libname} = %{version}-%{release}
 Provides:	%{name}-devel = %{version}-%{release}
 Provides:	netfilter_cttimeout-devel = %{version}-%{release}
 
-%description -n	%{develname}
+%description -n	%{devname}
 This package contains the development files for %{name}.
 
 %prep
@@ -48,25 +48,12 @@ This package contains the development files for %{name}.
 %install
 %makeinstall_std
 
-rm -f %{buildroot}%{_libdir}/*.la
-
 %files -n %{libname}
-%{_libdir}/*.so.%{major}*
+%{_libdir}/libnetfilter_cttimeout*.so.%{major}*
 
-%files -n %{develname}
+%files -n %{devname}
 %dir %{_includedir}/%{name}
 %{_includedir}/%{name}/%{name}*.h
 %{_libdir}/%{name}.so
 %{_libdir}/pkgconfig/%{name}.pc
-
-
-%changelog
-* Mon May 28 2012 Oden Eriksson <oeriksson@mandriva.com> 1.0.0-2
-+ Revision: 800927
-- rebuild
-
-* Mon May 28 2012 Oden Eriksson <oeriksson@mandriva.com> 1.0.0-1
-+ Revision: 800911
-- initial Mandriva package
-- Created package structure for libnetfilter_cttimeout.
 
