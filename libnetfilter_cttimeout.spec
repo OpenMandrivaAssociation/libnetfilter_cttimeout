@@ -5,7 +5,7 @@
 Summary:	Netfilter extended cttimeout infrastructure library
 Name:		libnetfilter_cttimeout
 Version:	1.0.0
-Release:	4
+Release:	5
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://www.netfilter.org/projects/%{name}/
