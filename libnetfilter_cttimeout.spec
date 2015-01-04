@@ -1,3 +1,4 @@
+%define debug_package %{nil}
 %define major	1
 %define libname	%mklibname netfilter_cttimeout %{major}
 %define devname	%mklibname netfilter_cttimeout -d
@@ -5,7 +6,7 @@
 Summary:	Netfilter extended cttimeout infrastructure library
 Name:		libnetfilter_cttimeout
 Version:	1.0.0
-Release:	9
+Release:	10
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://www.netfilter.org/projects/%{name}/
@@ -42,7 +43,8 @@ This package contains the development files for %{name}.
 %setup -q
 
 %build
-%configure2_5x
+export CFLAGS=-fvisibility=default
+%configure
 %make
 
 %install
