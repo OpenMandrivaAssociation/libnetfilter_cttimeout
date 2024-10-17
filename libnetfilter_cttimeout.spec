@@ -9,7 +9,7 @@ Version:	1.0.1
 Release:	2
 License:	GPLv2+
 Group:		System/Kernel and hardware
-Url:		http://www.netfilter.org/projects/%{name}/
+Url:		https://www.netfilter.org/projects/%{name}/
 Source0:	http://www.netfilter.org/projects/%{name}/files/%{name}-%{version}.tar.bz2
 Source1:	http://www.netfilter.org/projects/%{name}/files/%{name}-%{version}.tar.bz2.sig
 BuildRequires:	pkgconfig(libmnl) >= 1.0.0
